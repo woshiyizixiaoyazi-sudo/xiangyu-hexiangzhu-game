@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="xiangyu-app" content="game-v1.3"><meta name="theme-color" content="#203d50"><meta name="description" content="香遇合香工坊：选一份心情，亲手串出你的香气。可玩的合香珠创作游戏。">
+<title>香遇 · 合香工坊</title><link rel="stylesheet" href="game.css">
+<script src="../offline-register.js" defer></script></head>
+<body>
+<header class="site-header"><a class="wordmark" href="../index.html" aria-label="返回香遇首页"><span class="brand-mark">香</span><span>香遇<small>XIANG YU</small></span></a><nav aria-label="工坊导航"><button data-action="workshop" class="nav-current">合香工坊</button><button data-action="collection">我的香匣 <span id="workCount">0</span></button><button data-action="journey">寻香手记</button></nav><button id="soundToggle" class="icon-button" aria-pressed="false" aria-label="开启音效">♫<span>音效关</span></button></header>
+<main>
+<section class="intro"><div><p class="eyebrow"><span></span> 一珠一香 · 随心而作</p><h1>把心情，<br>串成一束<span class="title-scent">香<svg viewBox="0 0 115 14" aria-hidden="true"><path d="M3 10Q55 0 112 8M17 13Q61 6 101 10"/></svg></span>。</h1><p class="intro-copy">今天，给自己一点好闻的时间。<br>选一份心情，让指尖替你说。</p></div><div class="intro-side"><span class="round-stamp">不赶时间<br>好好玩香</span><div class="hand-doodle" aria-hidden="true"><svg viewBox="0 0 180 120"><path d="M45 106q-16-30-17-48q-1-8 7-7l15 24-8-53q-1-13 8-13q6 0 8 12l9 40-1-46q1-13 9-12q9 0 9 14l3 41 8-32q4-11 12-8q6 3 3 15l-7 40 16-15q9-7 15-1q5 7-5 17l-21 26q-17 14-14 31M57 108q15-8 29 1"/><path d="M137 25l9-13m-4 30 18-2M14 20l-8-9"/></svg></div><p>made by your mood<br><strong>你的心情，有自己的形状。</strong></p></div></section>
+<div class="step-line" aria-label="制作步骤"><span id="step1" class="active"><i>01</i> 遇见心情</span><b>—</b><span id="step2"><i>02</i> 手作成串</span><b>—</b><span id="step3"><i>03</i> 留下香方</span><small id="saveStatus" role="status">草稿自动保存</small></div>
+<section class="workshop" id="workshop">
+<div class="studio-column">
+<div class="mode-bar"><div class="segmented"><button id="freeMode" aria-pressed="true">自由创作</button><button data-action="journey">关卡挑战 <span>4</span></button></div><button data-action="patterns" class="pattern-launch">✧ 灵感起手</button></div>
+<div class="bracelet-stage" id="stage"><div class="paper-label">MOOD, MADE TANGIBLE.</div><div class="stage-orbit" aria-hidden="true"></div><span class="stage-note">每一颗，<br>都有你的心意。<svg viewBox="0 0 65 45" aria-hidden="true"><path d="M3 5q42-9 47 29m-9-6 10 9 8-12"/></svg></span><div id="bracelet" class="bracelet" role="group" aria-label="手串串珠区"></div><div class="ring-center"><span id="centerIcon">✳</span><strong id="centerTitle">一颗一颗<br>慢慢来</strong><span id="beadCount">0 / 20 颗</span></div><div class="stage-footer"><span><i></i> 指尖创作 · 即时预览</span><span id="paletteLabel">自然木色</span></div><div id="dragGhost" hidden></div></div>
+<div class="studio-toolbar" aria-label="串珠工具"><button id="undoButton" title="撤销上一步">↶ <span>撤销</span></button><button id="removeButton" title="移除选中的香珠">− <span>移除</span></button><button id="rotateButton" title="顺时针移一位">↻ <span>移一位</span></button><button id="fillButton">✧ <span>灵感补齐</span></button><button id="mirrorButton" title="将右半圈复制到左边，含空位，可撤销">◈ <span>对称</span></button><button id="clearButton">⌫ <span>清空</span></button></div>
+<div id="challengePanel" class="challenge-panel" hidden></div>
+<div class="make-card"><div><p class="eyebrow">你的作品，值得被记住</p><h3 id="pieceTitle">给今天，起个名字。</h3><p id="pieceInfo">填满珠圈，就能合成你的专属香方。</p></div><button class="primary" id="synthesizeButton">合成香方 <span>↗</span></button></div>
+<p class="studio-help">点香珠可直接串入；也可按住拖到珠圈。点选珠位后，可替换或移除。</p>
+</div>
+<aside class="ingredients-panel"><div id="liveString" class="live-string" aria-label="串珠实时进度"></div>
+<section class="control-section"><div class="section-heading"><h2><em>01</em> 今天是什么心情？</h2><span>听听自己</span></div><div id="moodOptions" class="mood-options"></div><div class="recommendation" id="recommendation"></div></section>
+<section class="control-section"><div class="section-heading"><h2><em>02</em> 挑一颗喜欢的香</h2><span>点选 / 拖拽</span></div><div id="beadOptions" class="bead-options"></div><p id="activeBeadInfo" class="material-note"></p></section>
+<section class="control-section finish-options"><div class="section-heading"><h2><em>03</em> 给它一点你的个性</h2></div><div class="option-row"><span class="option-label">珠型</span><div id="shapeOptions" class="small-options"></div></div><div class="option-row"><span class="option-label">配色</span><div id="paletteOptions" class="small-options palette-options"></div></div><div class="option-row color-row"><span class="option-label">点缀色</span><div id="colorOptions" class="color-options"></div><span class="tiny">用于下一颗</span></div><div class="option-row"><label for="sizeSelect" class="option-label">颗数</label><select id="sizeSelect"><option value="16">16 颗 · 轻巧</option><option value="20" selected>20 颗 · 经典</option><option value="24">24 颗 · 丰富</option></select><small>创作规格示意</small></div></section>
+</aside>
+</section>
+<section class="bottom-note"><span class="small-flower">✳</span><p>一串手作，装得下很多小小的喜欢。<br><small>游戏香方是气味与色彩搭配示意，非制作配方，不代表真实成分或功效。</small></p><button data-action="guide">怎么玩 <span>↗</span></button></section>
+</main>
+<footer><span>仙作汇 · 香遇</span><span>让气味，陪你过日常。</span><a href="../index.html">回到香遇 ↗</a></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<dialog id="modal" aria-labelledby="modalTitle"><div class="dialog-top"><span class="eyebrow">XIANG YU · 合香工坊</span><button class="close-button" id="closeModal" aria-label="关闭弹窗">×</button></div><div id="modalContent"></div></dialog>
+<script type="module" src="app.js"></script>
+</body></html>
