@@ -1,0 +1,23 @@
+.product-photo-trigger{position:relative;display:block;width:100%;min-width:0;margin:0;padding:0;border:0;border-radius:inherit;background:#fff;color:#26384d;cursor:zoom-in;overflow:hidden;font:inherit;text-align:inherit;touch-action:manipulation}
+.product-photo-trigger:after{content:'放大看图';position:absolute;right:7px;bottom:7px;padding:5px 8px;border-radius:12px;background:#253349e8;color:#fff;font:11px/1.3 system-ui,sans-serif;pointer-events:none;box-shadow:0 1px 5px #0002}
+.product-photo-trigger:focus-visible{outline:3px solid #735383;outline-offset:-4px}
+.product-photo-trigger:disabled{cursor:default}.product-photo-trigger:disabled:after{display:none}
+.product-option>.product-photo-trigger{border-radius:12px 12px 0 0}.product-option>.product-photo-trigger>img{display:block;width:100%;height:270px;aspect-ratio:1/1;object-fit:contain}
+.cart-line>.product-photo-trigger{align-self:start;border-radius:8px}.cart-line>.product-photo-trigger>img{display:block;width:100%;height:100px;object-fit:contain}.cart-line>.product-photo-trigger:after{font-size:10px;right:3px;bottom:3px;padding:3px 5px}
+.product-photo-dialog{width:min(1000px,calc(100vw - 24px));height:min(900px,calc(100dvh - 24px));max-width:none;max-height:none;padding:0;border:1px solid #d3d9e0;border-radius:24px;background:#faf8f1;color:#253349;box-shadow:0 18px 70px #14253955;overflow:hidden;margin:auto}
+.product-photo-dialog::backdrop{background:#172334c9;backdrop-filter:blur(4px)}
+.product-photo-dialog .photo-viewer-shell{height:100%;min-height:0;display:flex;flex-direction:column}
+.product-photo-dialog .photo-viewer-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 15px;flex:none;border-bottom:1px solid #dce0e5;background:#faf8f1}
+.product-photo-dialog .photo-viewer-header h2{font:600 16px/1.45 system-ui,sans-serif;margin:0;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.product-photo-dialog button{font:14px/1.3 system-ui,sans-serif;min-height:44px;min-width:44px;padding:10px 13px;flex:none;border:1px solid #c6cfdb;border-radius:14px;background:#fff;color:#253349;cursor:pointer;touch-action:manipulation}
+.product-photo-dialog button:focus-visible,.product-photo-dialog .photo-viewer-stage:focus-visible{outline:3px solid #82679b;outline-offset:-3px}.product-photo-dialog button:disabled{opacity:.4;cursor:default}
+.product-photo-dialog .photo-viewer-stage{position:relative;flex:1;min-height:0;min-width:0;overflow:auto;overscroll-behavior:contain;background:#e8edf1;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y pinch-zoom}
+.product-photo-dialog .photo-viewer-stage:not(.is-zoomed){overflow:hidden}
+.product-photo-dialog .photo-viewer-canvas{display:grid;place-items:center;min-width:100%;min-height:100%;padding:12px;box-sizing:border-box}
+.product-photo-dialog .photo-viewer-image{display:block;flex:none;max-width:none;max-height:none;object-fit:contain;user-select:none;-webkit-user-select:none}
+.product-photo-dialog .photo-viewer-image[hidden]{display:none}.product-photo-dialog .is-zoomed{cursor:grab}.product-photo-dialog .is-zoomed:active{cursor:grabbing}
+.product-photo-dialog .photo-viewer-status{position:absolute;inset:0;margin:0;display:grid;place-items:center;padding:24px;text-align:center;font-size:14px;pointer-events:none}.product-photo-dialog .photo-viewer-status[hidden]{display:none}
+.product-photo-dialog .photo-viewer-footer{flex:none;padding:10px 12px max(10px,env(safe-area-inset-bottom));background:#faf8f1;border-top:1px solid #dce0e5}
+.product-photo-dialog .photo-viewer-tools{display:flex;align-items:center;justify-content:center;gap:8px}.product-photo-dialog output{min-width:35px;text-align:center;font:600 14px system-ui,sans-serif}.product-photo-dialog .photo-viewer-footer p{margin:7px 0 0;font:11px/1.4 system-ui,sans-serif;text-align:center;color:#607081}
+@media(max-width:650px){.mood-studio.studio-ready .product-option>.product-photo-trigger>img{height:auto;aspect-ratio:1/1}.cart-line>.product-photo-trigger>img{height:70px}.product-photo-dialog{width:calc(100vw - 12px);height:calc(100dvh - 12px - env(safe-area-inset-top));border-radius:20px}.product-photo-dialog .photo-viewer-header{padding:10px}.product-photo-dialog .photo-viewer-header h2{font-size:14px}.product-photo-dialog .photo-viewer-header button{padding:10px;min-width:64px}.product-photo-dialog .photo-viewer-footer{padding-top:8px}.product-photo-dialog .photo-viewer-tools{gap:6px}}
+@supports not(height:100dvh){.product-photo-dialog{height:calc(100vh - 24px)}}

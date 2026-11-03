@@ -1,0 +1,26 @@
+/* This entire component is scoped to the homepage game section. */
+#xiangyu-game-embed{position:relative;margin:30px 0 27px;padding:24px 19px 20px;isolation:isolate;background:#f4d64b;border:1.5px solid #202421;box-shadow:4px 4px 0 #202421;scroll-margin-top:14px;overflow:hidden}
+#xiangyu-game-embed .xyg-kicker{font-size:10px;font-weight:900;letter-spacing:.15em;margin:0 0 15px;color:#202421}
+#xiangyu-game-embed h2{font-size:31px;line-height:1.2;letter-spacing:-1.5px;max-width:240px;margin:0 0 13px;color:#202421}
+#xiangyu-game-embed .xyg-stamp{position:absolute;top:21px;right:17px;width:56px;height:56px;display:grid;place-content:center;border:1.4px solid #202421;border-radius:50%;background:#eb432f;color:#fffdf7;font-size:13px;font-weight:800;line-height:1.25;transform:rotate(12deg)}
+#xiangyu-game-embed .xyg-description{font-size:13px;line-height:1.8;margin:0 0 15px;color:#31362c}
+#xiangyu-game-embed .xyg-beads{display:flex;align-items:center;gap:3px;margin:18px 0 14px;min-height:26px}
+#xiangyu-game-embed .xyg-beads i{width:25px;height:25px;flex:none;border:1px solid #202421;border-radius:50%;background:radial-gradient(circle at 34% 28%,#b88966,#72503c 67%,#483c32);box-shadow:1px 2px 0 #20242125}
+#xiangyu-game-embed .xyg-beads i:nth-child(2),#xiangyu-game-embed .xyg-beads i:nth-child(6){background:radial-gradient(circle at 34% 28%,#f6edcd,#cebd8c 68%,#a5956d)}
+#xiangyu-game-embed .xyg-beads i:nth-child(3){background:radial-gradient(circle at 34% 28%,#6b8a72,#31584a 68%,#263e35)}
+#xiangyu-game-embed .xyg-beads i:nth-child(5){background:radial-gradient(circle at 34% 28%,#ec7868,#b2473a 68%,#773b30)}
+#xiangyu-game-embed .xyg-beads span{font-size:9px;line-height:1.4;margin-left:6px;max-width:56px;color:#4a4d37}
+#xiangyu-game-embed .xyg-features{font-size:11px;letter-spacing:.04em;margin:12px 0 19px;color:#454b35}
+#xiangyu-game-embed .xyg-actions{display:flex;align-items:center;gap:13px}
+#xiangyu-game-embed .xyg-open{border:1.5px solid #202421;border-radius:3px;background:#2956e8;color:#fff;font-weight:800;font-size:14px;min-height:48px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex:1;box-shadow:2px 2px 0 #202421;touch-action:manipulation}
+#xiangyu-game-embed .xyg-open:active{transform:translate(1px,1px);box-shadow:1px 1px 0 #202421}
+#xiangyu-game-embed .xyg-full{font-size:12px;font-weight:700;text-decoration:underline;text-underline-offset:4px;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center;color:#202421}
+#xiangyu-game-embed .xyg-panel{margin:20px -19px -20px;border-top:1.5px solid #202421;background:#fffdf7}
+#xiangyu-game-embed .xyg-frame-host{background:#fffdf7;min-width:0;position:relative}
+#xiangyu-game-embed iframe{display:block;width:100%;max-width:100%;height:800px;height:clamp(620px,88svh,920px);border:0;background:#fffdf7}
+#xiangyu-game-embed .xyg-frame-note{font-size:10px;line-height:1.6;padding:11px 15px;margin:0;background:#ecebe3;color:#626961}
+#xiangyu-game-embed.xyg-is-open .xyg-intro{display:none}
+#xiangyu-game-embed.xyg-is-open{padding-top:15px}
+#xiangyu-game-embed [hidden]{display:none!important}
+#xiangyu-game-embed button:focus-visible,#xiangyu-game-embed a:focus-visible{outline:3px solid #202421;outline-offset:4px}
+@media(max-width:360px){#xiangyu-game-embed{padding-left:15px;padding-right:15px}#xiangyu-game-embed .xyg-panel{margin-left:-15px;margin-right:-15px}#xiangyu-game-embed h2{font-size:28px}#xiangyu-game-embed .xyg-beads i{width:22px;height:22px}#xiangyu-game-embed .xyg-open{font-size:13px;padding:10px}#xiangyu-game-embed .xyg-actions{gap:10px}}
