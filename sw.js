@@ -3,7 +3,7 @@ const SCOPE_URL = new URL(self.registration.scope);
 const SCOPE_PATH = SCOPE_URL.pathname;
 // Different GitHub Pages projects share an origin but must not share caches.
 const CACHE_PREFIX = 'xiangyu-saved-pages-' + encodeURIComponent(SCOPE_PATH) + '-';
-const CACHE = CACHE_PREFIX + 'v32-craft13';
+const CACHE = CACHE_PREFIX + 'v32-craft13-c20261104';
 // Preload the usable site and game once: the first visit must not need a reload
 // before it can work offline. Product photographs are saved when viewed.
 const START_FILES = [
