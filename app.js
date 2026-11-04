@@ -88,7 +88,7 @@ function matchProducts(input,products=PRODUCTS){
  const words=[...new Set((input.query||'').trim().split(/[\s，,、；;]+/).filter(Boolean))];
  const aroma=[...new Set((input.scentDetail||'').trim().split(/[\s，,、；;]+/).filter(Boolean))];
  const familyWords=input.family&&input.family!=='auto'?(SCENT_WORDS[input.family]||[]):[];
- const text=(input.needText||'')+' '+(input.scentDetail||'');const literalTerms=['茉莉','玫瑰','栀子','桂花','鹅梨','紫气东来','花蕊夫人','天木藏香','蓝色妖姬','千怜香','鼻炎','暖宫',...Object.values(SCENT_WORDS).flat()];const avoidText=input.avoid||'';const blocked=literalTerms.filter(w=>avoidText.includes(w));const titleTerms=literalTerms.filter(w=>text.includes(w)&&!new RegExp('不(?:喜欢|想要|要|想)[^，。；]{0,8}'+w).test(text));
+ const text=(input.needText||'')+' '+(input.scentDetail||'');const literalTerms=['茉莉','玫瑰','栀子','桂花','鹅梨','紫气东来','花蕊夫人','天木藏香','蓝色妖姬','千怜香',...Object.values(SCENT_WORDS).flat()];const avoidText=input.avoid||'';const blocked=literalTerms.filter(w=>avoidText.includes(w));const titleTerms=literalTerms.filter(w=>text.includes(w)&&!new RegExp('不(?:喜欢|想要|要|想)[^，。；]{0,8}'+w).test(text));
  const explicit=[...new Set([...words,...aroma.filter(w=>products.some(p=>p.name.includes(w))),...titleTerms])];
  const typedPool=input.category&&input.category!=='all'?products.filter(p=>p.cat===input.category):products;
  const pool=typedPool.filter(p=>!blocked.some(w=>p.name.includes(w))&&(!words.length||words.some(w=>p.name.includes(w))));

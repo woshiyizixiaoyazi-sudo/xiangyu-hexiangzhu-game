@@ -3,7 +3,7 @@ const SCOPE_URL = new URL(self.registration.scope);
 const SCOPE_PATH = SCOPE_URL.pathname;
 // Different GitHub Pages projects share an origin but must not share caches.
 const CACHE_PREFIX = 'xiangyu-saved-pages-' + encodeURIComponent(SCOPE_PATH) + '-';
-const CACHE = CACHE_PREFIX + 'v32-craft13-c20261104';
+const CACHE = CACHE_PREFIX + 'v33-craft13-c20261104';
 // Preload the usable site and game once: the first visit must not need a reload
 // before it can work offline. Product photographs are saved when viewed.
 const START_FILES = [
@@ -18,7 +18,7 @@ const START_FILES = [
   'storefront.css', 'pwa.js', 'illustration.png', 'bracelets.png',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable.png',
   'photos/upload-S1.webp', 'photos/P0.jpg', 'photos/P1.jpg', 'photos/P2.jpg',
-  'photos/P5.jpg', 'photos/wechat.jpg'
+  'photos/P5.jpg'
 ];
 const ALLOWED = new Set(START_FILES.map(path => '/' + path));
 function canonicalPath(path) {
